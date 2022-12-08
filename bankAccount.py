@@ -85,14 +85,11 @@ class BankAccount:
     #  @param self
     #   @returns interest amount 
     def addInterest(self):
-        try:
-            if self._accoutType == "saving":
-                amount = self.Financial.percentOf(self._interest, self._balance)
-                self._balance += amount
-            else:
-                raise ValueError
-        except ValueError:
-            print("this account is not a savings account")
+        if self._accoutType == "saving":
+            amount = self.Financial.percentOf(self._interest, self._balance)
+            self._balance += amount
+        else:
+            self._balance = self._balance
 
     class Financial:    
         def percentOf(interestRate, balance):
