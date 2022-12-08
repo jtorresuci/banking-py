@@ -16,9 +16,6 @@ print(samsAcc.getBalance())
 print(leilasAcc.getBalance())
 
 # testing exception with transfer more than balance amount
-adamsAcc.withdraw(101)
-samsAcc.withdraw(101)
-leilasAcc.withdraw(101)
 
 # testing transfer and getName/getBalance
 samsAcc.transfer(200, adamsAcc.getName())
