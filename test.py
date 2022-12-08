@@ -11,9 +11,9 @@ leilasAcc.addInterest()
 samsAcc.addInterest()
 
 # using getBalance to print
-print(adamsAcc.getBalance())
-print(samsAcc.getBalance())
-print(leilasAcc.getBalance())
+print(f"Leila's balance after interest is $%.2f"%(leilasAcc.getBalance()))
+print(f"Sam's balance after interest is $%.2f"%(samsAcc.getBalance()))
+print(f"Adam's balance after interest is $%.2f"%(adamsAcc.getBalance()))
 
 # testing exception with transfer more than balance amount
 
