@@ -1,5 +1,6 @@
+
 class BankAccount:
-    lastAccNum = 0
+    lastAccNum = 1000
 
     # Write function documentation
 
@@ -28,6 +29,9 @@ class BankAccount:
     def getBalance(self):
         return self._balance
     
+    def getName(self):
+        return self._accName
+    
     ## Gets the account type of this account.
     #  @return the accountType 
     #
@@ -51,7 +55,7 @@ class BankAccount:
             else:
                 raise ValueError
         except ValueError:
-            print("Insufficient funds")
+            print(f'{self._accName} has insufficient funds')
             
     ## Deposits money into this account.
     #  @param amount to deposit
@@ -70,23 +74,24 @@ class BankAccount:
             else:
                 raise ValueError
         except ValueError:
-            print("Insufficient funds")        
+            print(self.getName() + " has insufficient funds")        
     
     # display users account 
     # @return accNum , accName , Balance, accType
     #
     def displayAccountInfo(self):
-        print(self._balance)
-        print(self._accNum)
-        print(self._accName)
-        print(self._accountType)
+        print(f'The account name: {self._accName}')
+        print(f'The account num: {self._accNum}')
+        print(f'The account type: {self._accountType}')
+        print(f'The account balance: ${self._balance:.2f}')
+        print("")
         
     ## Adds interest to this account.
     #  @param self
     #   @returns interest amount 
     def addInterest(self):
-        if self._accoutType == "saving":
-            amount = self.Financial.percentOf(self._interest, self._balance)
+        if self._accountType == "saving":
+            amount = self.Financial.percentOf(self._interest_rate, self._balance)
             self._balance += amount
         else:
             self._balance = self._balance
