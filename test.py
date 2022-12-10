@@ -16,11 +16,12 @@ print(f"Leila's balance after interest is $%.2f"%(leilasAcc.getBalance()))
 print(f"Sam's balance after interest is $%.2f"%(samsAcc.getBalance()))
 print(f"Adam's balance after interest is $%.2f"%(adamsAcc.getBalance()))
 
-# testing exception with transfer more than balance amount 
-# testing transfer and getName/getBalance
+# testing exception with transfer more than balance amount
 print("")
 samsAcc.transfer(200, adamsAcc)
+leilasAcc.transfer(50, adamsAcc)
 
+# testing transfer and getName/getBalance
 print("")
 print(f'{adamsAcc.getName()}\'s account balance after transfer is ${adamsAcc.getBalance():.2f}')
 print(f'{leilasAcc.getName()}\'s account balance after transfer is ${leilasAcc.getBalance():.2f}')
