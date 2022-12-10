@@ -26,7 +26,7 @@ print("")
 print(f'{adamsAcc.getName()}\'s account balance after transfer is ${adamsAcc.getBalance():.2f}')
 print(f'{leilasAcc.getName()}\'s account balance after transfer is ${leilasAcc.getBalance():.2f}')
 
-# testing deposit method
+# testing deposit then printing after the deposit
 leilasAcc.deposit(100)
 samsAcc.deposit(100)
 adamsAcc.deposit(100)
