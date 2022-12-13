@@ -34,7 +34,7 @@ print(f'{leilasAcc.getName()}\'s balance after deposit is ${leilasAcc.getBalance
 print(f'{samsAcc.getName()}\'s balance after deposit is ${samsAcc.getBalance():.2f}')
 print(f'{adamsAcc.getName()}\'s balance after deposit is ${adamsAcc.getBalance():.2f}')
 
-# testing withdraw method
+# testing withdrawal of more than account balance with Adam, then with Sam and Leila THEN printing Sam and Leila
 adamsAcc.withdraw(300)
 samsAcc.withdraw(200)
 leilasAcc.withdraw(200)

@@ -24,8 +24,8 @@ class BankAccount:
         self._interest_rate = 0.03
         
     ## Gets the current balance of this account.
+    # @param self
     #  @return the current balance
-    #
     def getBalance(self):
         return self._balance
     
