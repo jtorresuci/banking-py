@@ -1,3 +1,6 @@
+# Helen Truong & Junior Torres
+# Project 3 BankAccount
+# December 13, 2022
 from bankAccount import BankAccount
 
 #Instantiate 3 objects
