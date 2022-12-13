@@ -49,6 +49,7 @@ print(f'{adamsAcc.getName()} account num: {adamsAcc.getAccNum()}')
 print(f'{adamsAcc.getName()} account type: {adamsAcc.getAccountType()}')
 print("")
 
+# display all account information after alterations for all 3 accounts
 samsAcc.displayAccountInfo()
 leilasAcc.displayAccountInfo()
 adamsAcc.displayAccountInfo()
