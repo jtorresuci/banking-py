@@ -25,15 +25,19 @@ class BankAccount:
         
     ## Gets the current balance of this account.
     # @param self
-    #  @return the current balance
+    # @return the current balance
     def getBalance(self):
         return self._balance
     
+    ## Gets the name of the account
+    # @param self
+    # @return the accounts name
     def getName(self):
         return self._accName
     
     ## Gets the account type of this account.
-    #  @return the accountType 
+    #  @return the accountType
+    #  
     #
     def getAccountType(self):
         return self._accountType
@@ -59,13 +63,13 @@ class BankAccount:
             
     ## Deposits money into this account.
     #  @param amount to deposit
-    #
+    #  @returns nothing 
     def deposit(self, amt):
         self._balance += amt
         
     # transfers money from one account to another
     # @param amount to transfer, bankAccount obj
-    #
+    # @returns nothing 
     def transfer(self, amt, bank_account2):
         try:
             if amt <= self._balance:
@@ -77,6 +81,7 @@ class BankAccount:
             print(self.getName() + " has insufficient funds")        
     
     # display users account 
+    # @
     # @return accNum , accName , Balance, accType
     #
     def displayAccountInfo(self):
@@ -86,7 +91,7 @@ class BankAccount:
         print(f'The account balance: ${self._balance:.2f}')
         print("")
         
-    ## Adds interest to this account.
+    ## Adds interest to ONLY a saving account 
     #  @param self
     #   @returns interest amount 
     def addInterest(self):
@@ -96,6 +101,9 @@ class BankAccount:
         else:
             self._balance = self._balance
 
+    ## class Financial
+    #  @param interestRate and balance
+    #   @returns interest balance
     class Financial:    
         def percentOf(interestRate, balance):
             balance *= interestRate
